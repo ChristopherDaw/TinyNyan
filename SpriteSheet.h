@@ -4,6 +4,12 @@
 #include <TinyScreen.h>
 
 extern const uint16_t alpha;
+extern const uint16_t red;
+extern const uint16_t orange;
+extern const uint16_t yellow;
+extern const uint16_t green;
+extern const uint16_t blue;
+extern const uint16_t purple;
 
 //16 bit color space BBBB BGGG GGGR RRRR
 
@@ -35,7 +41,7 @@ const unsigned int rainbowBit[] = {
   purple,
   purple,
   alpha,
-}
+};
 
 // 32x20
 const unsigned int nyanCat[] = {
