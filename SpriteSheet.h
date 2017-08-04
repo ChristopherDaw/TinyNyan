@@ -21,26 +21,28 @@ const uint16_t ta = 0x6BFF;
 const uint16_t pi = 0x79BF;
 const uint16_t re = 0x001F;
 
+// 4x20
 const unsigned int rainbowBit[] = {
-  alpha,
-  red,
-  red,
-  red,
-  orange,
-  orange,
-  yellow,
-  yellow,
-  yellow,
-  green,
-  green,
-  green,
-  blue,
-  blue,
-  blue,
-  purple,
-  purple,
-  purple,
-  alpha,
+  alpha, alpha, alpha, alpha,
+  red, red, red, red,
+  red, red, red, red,
+  red, red, red, red,
+  orange, orange, orange, orange,
+  orange, orange, orange, orange,
+  orange, orange, orange, orange,
+  yellow, yellow, yellow, yellow,
+  yellow, yellow, yellow, yellow,
+  yellow, yellow, yellow, yellow,
+  green, green, green, green,
+  green, green, green, green,
+  green, green, green, green,
+  blue, blue, blue, blue, 
+  blue, blue, blue, blue, 
+  blue, blue, blue, blue,
+  purple, purple, purple, purple, 
+  purple, purple, purple, purple, 
+  purple, purple, purple, purple, 
+  alpha, alpha, alpha, alpha,
 };
 
 // 32x20
@@ -65,6 +67,126 @@ const unsigned int nyanCat[] = {
   al, al, al, bl, dg, dg, dg, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, bl, dg, bl, al, al, al, al, al,
   al, al, al, bl, dg, dg, bl, al, bl, dg, dg, bl, al, al, al, al, al, bl, dg, dg, bl, al, bl, bl, dg, dg, bl, al, al, al, al, al,
   al, al, al, bl, bl, bl, al, al, bl, bl, bl, al, al, al, al, al, al, bl, bl, bl, al, al, al, bl, bl, bl, bl, al, al, al, al, al,
+};
+
+// 16x16
+const unsigned int star0[] = {
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+};
+
+// 16x16
+const unsigned int star1[] = {
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, wh, wh, al, al, wh, wh, al, al, al, al, al,
+  al, al, al, al, al, wh, wh, al, al, wh, wh, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+};
+
+// 16x16
+const unsigned int star2[] = {
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, wh, wh, wh, wh, al, al, wh, wh, wh, wh, al, al, al,
+  al, al, al, wh, wh, wh, wh, al, al, wh, wh, wh, wh, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+};
+
+// 16x16
+const unsigned int star3[] = {
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, wh, wh, wh, wh, al, al, wh, wh, al, al, wh, wh, wh, wh, al,
+  al, wh, wh, wh, wh, al, al, wh, wh, al, al, wh, wh, wh, wh, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+};
+
+// 16x16
+const unsigned int star4[] = {
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, wh, wh, al, al, al, al, al, al, wh, wh, al, al, al,
+  al, al, al, wh, wh, al, al, al, al, al, al, wh, wh, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, wh, wh, al, al, al, al, al, al, al, al, al, al, wh, wh, al,
+  al, wh, wh, al, al, al, al, al, al, al, al, al, al, wh, wh, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, wh, wh, al, al, al, al, al, al, wh, wh, al, al, al,
+  al, al, al, wh, wh, al, al, al, al, al, al, wh, wh, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+};
+
+// 16x16
+const unsigned int star5[] = {
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, wh, wh, al, al, al, al, al, al, al, al, al, al, wh, wh, al,
+  al, wh, wh, al, al, al, al, al, al, al, al, al, al, wh, wh, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, wh, wh, al, al, al, al, al, al, al,
+  al, al, al, al, al, al, al, al, al, al, al, al, al, al, al, al,
 };
 
 
