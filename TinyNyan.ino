@@ -40,7 +40,7 @@ typedef struct {
 } ts_sprite;
 
 // Cat sprite
-ts_sprite nyan = {WIDTH/2 - 10, HEIGHT/2 - 5, 32, 20, 1, false, nyanCat};
+ts_sprite nyan = {WIDTH/2 - 10, HEIGHT/2 - 3, 33, 20, 0, false, nyanCat0};
 
 int amtRainbows = 19;
 // Rainbow sprites
@@ -68,7 +68,7 @@ ts_sprite rBit18 = {44,  nyan.y + 1, 4, 20, 0, true,  rainbowBit};
 
 int amtStars = 6;
 // Exploding star sprite
-ts_sprite xStar0 = {56, -5, 16, 16, 1, true, star1};
+ts_sprite xStar0 = {56, -5, 16, 16, 1, false, star1};
 ts_sprite xStar1 = {83, 10, 16, 16, 3, true, star3};
 ts_sprite xStar2 = {-5, 23, 16, 16, 1, true, star1};
 ts_sprite xStar3 = {15, 36, 16, 16, 5, true, star5};
@@ -142,8 +142,29 @@ void drawBuffer() {
 }
 
 void animate(){
+  // Move cat
+  const unsigned int* catList[] = {nyanCat0, nyanCat1, nyanCat2, nyanCat3, nyanCat4, nyanCat5};
+  int airTime = 2;
+  if (frame % 5 == 0) {
+    // move cat y
+    if (nyan.oscillation == 5){
+      nyan.y -= 1;
+    }else if (nyan.oscillation == 1){
+      nyan.y += 1;
+    }
+
+    
+    nyan.bitmap = catList[nyan.oscillation];
+    
+    if (nyan.oscillation >= 5){
+      nyan.oscillation = 0;
+    }else{
+      nyan.oscillation += 1;
+    }
+  }
+
   // Update rainbow sprites
-  if (frame % 16 == 0){
+  if (frame % 8 == 0){
     for(int i = 0; i < amtRainbows; i++){
       ts_sprite *rb = spriteList[i];
       if (rb->upDown){
@@ -158,7 +179,7 @@ void animate(){
   
   const unsigned int* starList[] = {star0, star1, star2, star3, star4, star5};
   // Update star sprites
-  if (frame % 8 == 0){
+  if (frame % 4 == 0){
     for(int i = amtRainbows; i < amtStars + amtRainbows; i++){
       ts_sprite *star = spriteList[i];
       int starState = star->oscillation;
@@ -233,9 +254,9 @@ void readInputs(){
   }
 }
 
-// ~60 frames per second, but the monitor is 32Hz 
+
 unsigned long frameStart = 0;
-unsigned long frameTime = 17;
+unsigned long frameTime = 10;
 
 void loop() {
   // framerate control
