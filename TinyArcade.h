@@ -26,21 +26,21 @@ The latest version of this library can be found at https://tinycircuits.com/
 #define TinyArcadePin1 45                   //Left  Button
 #define TinyArcadePin2 44                   //Right Button
 
-#define TinyArcadePinX 42                   //Analog Joystick x-axis 
-#define TinyArcadePinY 1                    //Analog Joystick y-axis 
+#define TinyArcadePinX 42                   //Analog Joystick x-axis
+#define TinyArcadePinY 1                    //Analog Joystick y-axis
 
 #define TinyArcadePinUp 42                  //Joystick UP
 #define TinyArcadePinDown 19                //Joystick DOWN
 #define TinyArcadePinLeft 25                //Joystick LEFT
 #define TinyArcadePinRight 15               //Joystick RIGHT
 
-const uint8_t TAJoystickUp  = 1 << 0;       //Mask 
-const uint8_t TAJoystickDown = 1 << 1;      //Mask 
+const uint8_t TAJoystickUp  = 1 << 0;       //Mask
+const uint8_t TAJoystickDown = 1 << 1;      //Mask
 const uint8_t TAJoystickLeft  = 1 << 2;     //Mask
-const uint8_t TAJoystickRight = 1 << 3;     //Mask 
+const uint8_t TAJoystickRight = 1 << 3;     //Mask
 
 const uint8_t TAButton1  = 1 << 0;          //Mask
-const uint8_t TAButton2 = 1 << 1;           //Mask 
+const uint8_t TAButton2 = 1 << 1;           //Mask
 
 uint8_t arcadeVersion = 1;
 

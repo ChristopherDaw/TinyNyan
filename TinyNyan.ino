@@ -40,30 +40,30 @@ typedef struct {
 } ts_sprite;
 
 // Cat sprite
-ts_sprite nyan = {WIDTH/2 - 10, HEIGHT/2 - 3, 33, 20, 0, false, nyanCat0};
+ts_sprite nyan = {WIDTH/2 - 10, HEIGHT/2 - 10, 33, 20, 0, false, nyanCat0};
 
 int amtRainbows = 19;
 // Rainbow sprites
 
-ts_sprite rBit0  = {-28, nyan.y + 1, 4, 20, 0, false, rainbowBit};
-ts_sprite rBit1  = {-24, nyan.y + 2, 4, 20, 1, true,  rainbowBit};
-ts_sprite rBit2  = {-20, nyan.y + 1, 4, 20, 0, false, rainbowBit};
-ts_sprite rBit3  = {-16, nyan.y + 0, 4, 20, 1, false, rainbowBit};
-ts_sprite rBit4  = {-12, nyan.y - 1, 4, 20, 2, false, rainbowBit};
-ts_sprite rBit5  = {-8,  nyan.y + 0, 4, 20, 1, false, rainbowBit};
-ts_sprite rBit6  = {-4,  nyan.y + 1, 4, 20, 0, false, rainbowBit};
-ts_sprite rBit7  = {0,   nyan.y + 2, 4, 20, 1, true,  rainbowBit};
-ts_sprite rBit8  = {4,   nyan.y + 1, 4, 20, 0, true,  rainbowBit};
-ts_sprite rBit9  = {8,   nyan.y + 0, 4, 20, 1, false, rainbowBit};
-ts_sprite rBit10 = {12,  nyan.y - 1, 4, 20, 2, false, rainbowBit};
-ts_sprite rBit11 = {16,  nyan.y + 0, 4, 20, 1, false, rainbowBit};
-ts_sprite rBit12 = {20,  nyan.y + 1, 4, 20, 0, false, rainbowBit};
-ts_sprite rBit13 = {24,  nyan.y + 2, 4, 20, 1, true,  rainbowBit};
-ts_sprite rBit14 = {28,  nyan.y + 1, 4, 20, 0, true,  rainbowBit};
-ts_sprite rBit15 = {32,  nyan.y + 0, 4, 20, 1, false, rainbowBit};
-ts_sprite rBit16 = {36,  nyan.y - 1, 4, 20, 2, false, rainbowBit};
-ts_sprite rBit17 = {40,  nyan.y + 0, 4, 20, 1, false, rainbowBit};
-ts_sprite rBit18 = {44,  nyan.y + 1, 4, 20, 0, true,  rainbowBit};
+ts_sprite rBit0  = {-28, nyan.y + 2, 4, 20, 0, false, rainbowBit};
+ts_sprite rBit1  = {-24, nyan.y + 3, 4, 20, 1, true,  rainbowBit};
+ts_sprite rBit2  = {-20, nyan.y + 2, 4, 20, 0, false, rainbowBit};
+ts_sprite rBit3  = {-16, nyan.y + 1, 4, 20, 1, false, rainbowBit};
+ts_sprite rBit4  = {-12, nyan.y + 0, 4, 20, 2, false, rainbowBit};
+ts_sprite rBit5  = {-8,  nyan.y + 1, 4, 20, 1, false, rainbowBit};
+ts_sprite rBit6  = {-4,  nyan.y + 2, 4, 20, 0, false, rainbowBit};
+ts_sprite rBit7  = {0,   nyan.y + 3, 4, 20, 1, true,  rainbowBit};
+ts_sprite rBit8  = {4,   nyan.y + 2, 4, 20, 0, true,  rainbowBit};
+ts_sprite rBit9  = {8,   nyan.y + 1, 4, 20, 1, false, rainbowBit};
+ts_sprite rBit10 = {12,  nyan.y + 0, 4, 20, 2, false, rainbowBit};
+ts_sprite rBit11 = {16,  nyan.y + 1, 4, 20, 1, false, rainbowBit};
+ts_sprite rBit12 = {20,  nyan.y + 2, 4, 20, 0, false, rainbowBit};
+ts_sprite rBit13 = {24,  nyan.y + 3, 4, 20, 1, true,  rainbowBit};
+ts_sprite rBit14 = {28,  nyan.y + 2, 4, 20, 0, true,  rainbowBit};
+ts_sprite rBit15 = {32,  nyan.y + 1, 4, 20, 1, false, rainbowBit};
+ts_sprite rBit16 = {36,  nyan.y + 0, 4, 20, 2, false, rainbowBit};
+ts_sprite rBit17 = {40,  nyan.y + 1, 4, 20, 1, false, rainbowBit};
+ts_sprite rBit18 = {44,  nyan.y + 2, 4, 20, 0, true,  rainbowBit};
 
 
 int amtStars = 6;
@@ -73,13 +73,17 @@ ts_sprite xStar1 = {83, 10, 16, 16, 3, true, star3};
 ts_sprite xStar2 = {-5, 23, 16, 16, 1, true, star1};
 ts_sprite xStar3 = {15, 36, 16, 16, 5, true, star5};
 ts_sprite xStar4 = {89, 43, 16, 16, 1, false, star1};
-ts_sprite xStar5 = {50, 50, 16, 16, 2, true, star2}; 
+ts_sprite xStar5 = {50, 50, 16, 16, 2, true, star2};
+
+//projectile
+const unsigned int* donuts[] = {donut0, donut1, donut2, donut3};
+ts_sprite donut = {nyan.x + 5, nyan.y, 22, 20, -1, false, donut0};
 
 
-int amtSprites = 26;
-ts_sprite * spriteList[] = {&rBit0, &rBit1, &rBit2, &rBit3, &rBit4, &rBit5, &rBit6, &rBit7, &rBit8, &rBit9, 
+int amtSprites = 27;
+ts_sprite * spriteList[] = {&rBit0, &rBit1, &rBit2, &rBit3, &rBit4, &rBit5, &rBit6, &rBit7, &rBit8, &rBit9,
                             &rBit10, &rBit11, &rBit12, &rBit13, &rBit14, &rBit15, &rBit16, &rBit17, &rBit18,
-                            &xStar0, &xStar1, &xStar2, &xStar3, &xStar4, &xStar5, &nyan};
+                            &xStar0, &xStar1, &xStar2, &xStar3, &xStar4, &xStar5, &donut, &nyan};
 
 //RGB565 color space BBBB BGGG GGGR RRRR
 const uint16_t black = 0x0000;
@@ -103,7 +107,7 @@ void drawBuffer() {
     // background for loop
     for (int b = 0; b < WIDTH; b++) {
       if ((b + bOffset) % 16 == 0){
-        colorIndex = (b + bOffset) / 16; 
+        colorIndex = (b + bOffset) / 16;
       }
 
       //lineBuffer[b * 2] = rainbow[colorIndex % 6] >> 8;
@@ -112,9 +116,11 @@ void drawBuffer() {
       lineBuffer[b * 2] = 0x2000 >> 8;
       lineBuffer[b * 2 + 1] = 0x2000;
     }
-    
+
     for (int spriteIndex = 0; spriteIndex < amtSprites; spriteIndex++) {
       ts_sprite *cs = spriteList[spriteIndex];
+      if(cs->oscillation < 0)
+        continue;
       if (y >= cs->y && y < cs->y + cs->height) {
         int endX = cs->x + cs->width;
         if (endX > nyan.x + 6 && spriteIndex < amtRainbows){
@@ -148,14 +154,14 @@ void animate(){
   if (frame % 5 == 0) {
     // move cat y
     if (nyan.oscillation == 5){
-      nyan.y -= 1;
+      nyan.y -= 2;
     }else if (nyan.oscillation == 1){
-      nyan.y += 1;
+      nyan.y += 2;
     }
 
-    
+
     nyan.bitmap = catList[nyan.oscillation];
-    
+
     if (nyan.oscillation >= 5){
       nyan.oscillation = 0;
     }else{
@@ -176,7 +182,7 @@ void animate(){
       }
     }
   }
-  
+
   const unsigned int* starList[] = {star0, star1, star2, star3, star4, star5};
   // Update star sprites
   if (frame % 4 == 0){
@@ -200,7 +206,7 @@ void animate(){
         }
       }else{
         if (starState <= 0){
-          starState = 5;        
+          starState = 5;
         }else{
           starState -= 1;
         }
@@ -208,6 +214,18 @@ void animate(){
 
       star->oscillation = starState;
       star->bitmap = starList[starState];
+    }
+  }
+
+  // Move projectile
+  if (frame % 4 == 0){
+    if (donut.oscillation > 0){
+      donut.x += 8;
+      if (donut.x > 96){
+        donut.oscillation = -1;
+        donut.x = nyan.x + 5;
+        donut.y = nyan.y;
+      }
     }
   }
 }
@@ -220,16 +238,22 @@ void readInputs(){
         sprite->y -= 1;
       }
       nyan.y -= 1;
+      if(donut.oscillation < 0){
+        donut.y -= 1;
+      }
     }
   }
 
   if (checkJoystick(TAJoystickDown)){
-    if(nyan.y + nyan.height < HEIGHT){
+    if(nyan.y + nyan.height < HEIGHT - 2){
       for(int i = 0; i < amtRainbows; i++){
         ts_sprite *sprite = spriteList[i];
         sprite->y += 1;
       }
       nyan.y += 1;
+      if(donut.oscillation < 0){
+        donut.y += 1;
+      }
     }
   }
 
@@ -240,6 +264,9 @@ void readInputs(){
         sprite->x -= 1;
       }
       nyan.x -= 1;
+      if(donut.oscillation < 0){
+        donut.x -= 1;
+      }
     }
   }
 
@@ -250,6 +277,17 @@ void readInputs(){
         sprite->x += 1;
       }
       nyan.x += 1;
+      if(donut.oscillation < 0){
+        donut.x += 1;
+      }
+    }
+  }
+
+  if (checkButton(TAButton1) || checkButton(TAButton2)){
+    if(donut.oscillation < 0){
+      int r = random(0, 4);
+      donut.bitmap = donuts[r];
+      donut.oscillation = 1;
     }
   }
 }
