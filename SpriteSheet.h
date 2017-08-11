@@ -17,19 +17,19 @@ const uint16_t al = alpha;
 //nyancat colors
 const uint16_t bl = 0x0000;
 const uint16_t wh = 0xFFFF;
-const uint16_t dg = 0x6DAD;
-const uint16_t ta = 0x6BFF;
-const uint16_t pi = 0x79BF;
-const uint16_t re = 0x001F;
+const uint16_t dg = 0xAD35;
+const uint16_t ta = 0xA69F;
+const uint16_t pi = 0x7D1F;
+const uint16_t re = 0xB21F;
 
 //donut colors
 const uint16_t bu = 0xF800;
-const uint16_t db = 0xF800;
-const uint16_t lb = 0x14D9;
-const uint16_t dp = 0x9BBF;
+const uint16_t db = 0xFE20;
+const uint16_t lb = 0x4333;
+const uint16_t dp = 0xCDDF;
 const uint16_t dw = 0xFFFF;
-const uint16_t dr = re;
-const uint16_t dv = 0xFB30;
+const uint16_t dr = 0x001F;
+const uint16_t dv = 0xCCDB;
 
 // 4x20
 const unsigned int rainbowBit[] = {

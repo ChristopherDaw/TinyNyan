@@ -88,11 +88,11 @@ ts_sprite * spriteList[] = {&rBit0, &rBit1, &rBit2, &rBit3, &rBit4, &rBit5, &rBi
 //RGB565 color space BBBB BGGG GGGR RRRR
 const uint16_t black = 0x0000;
 const uint16_t red = 0x001F;
-const uint16_t orange = 0x01BF;
+const uint16_t orange = 0x0D3F;
 const uint16_t yellow = 0x07FF;
-const uint16_t green = 0x07E0;
-const uint16_t blue = 0xF800;
-const uint16_t purple = 0xF853;
+const uint16_t green = 0x07E8;
+const uint16_t blue = 0xFD62;
+const uint16_t purple = 0xFA2E;
 
 uint16_t rainbow[] = {red, orange, yellow, green, blue, purple};
 
@@ -113,8 +113,8 @@ void drawBuffer() {
       //lineBuffer[b * 2] = rainbow[colorIndex % 6] >> 8;
       //lineBuffer[b * 2 + 1] = rainbow[colorIndex % 6];
 
-      lineBuffer[b * 2] = 0x2000 >> 8;
-      lineBuffer[b * 2 + 1] = 0x2000;
+      lineBuffer[b * 2] = 0x7202 >> 8;
+      lineBuffer[b * 2 + 1] = 0x7202;
     }
 
     for (int spriteIndex = 0; spriteIndex < amtSprites; spriteIndex++) {

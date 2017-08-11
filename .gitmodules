@@ -1,0 +1,3 @@
+[submodule "HTMLHexTo565"]
+	path = HTMLHexTo565
+	url = git@github.com:ChristopherDaw/HTMLHexTo565.git
